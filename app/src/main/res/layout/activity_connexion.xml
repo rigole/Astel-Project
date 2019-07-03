@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/arr"
+    tools:context=".Connexion">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F2B02779"
+    >
+
+    <LinearLayout
+        android:id="@+id/linear21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/linear22"
+        android:orientation="vertical"
+        android:padding="25dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="97dp"
+            android:layout_height="94dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+
+            />
+
+        <ImageView
+            android:id="@+id/phot2"
+            android:layout_width="301dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_alignBottom="@id/photo"
+            android:src="@drawable/new_wayfinding" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="15"
+            android:background="#F7370D" />
+
+        <TextView
+            android:id="@+id/bienvenue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Bievenue"
+            android:textAlignment="center"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/bienvenue2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Universitaire"
+            android:textAlignment="center"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear21"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/email_connexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:hint="Votre Email"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ffff"
+            android:textColorHint="#fff"
+            android:backgroundTint="@color/editextcolor"/>
+
+
+        <EditText
+
+            android:id="@+id/password2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:hint="Votre Mot de passe"
+            android:paddingLeft="10dp"
+            android:inputType="textPassword"
+
+            android:textColor="#ffff"
+            android:layout_marginRight="15dp"
+            android:backgroundTint="@color/editextcolor"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="#fff" />
+
+
+        <Button
+            android:id="@+id/btn_SignIn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/round_button"
+             android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="SE CONNECTER"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+
+            android:textSize="14dp"
+            android:textColor="#fff"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:gravity="left"
+                android:text="Mot de passe oublié?"
+                android:textColor="#fff" />
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Creer un Compte"
+                android:paddingRight="25dp"
+                android:gravity="right"
+                android:textAlignment="gravity"
+                android:textColor="#fff"
+
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear23"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/linear22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:text="Copyright TIPAM 2019,tous droits réservés"
+    android:textColor="#ffff"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

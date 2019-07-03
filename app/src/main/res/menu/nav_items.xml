@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_home"
+        android:icon="@drawable/ic_hamburger_icons_plan_icons_plan"
+        android:iconTint="@color/applicatioTheme"
+        app:itemTextColor="@color/applicatioTheme"
+
+        android:title="Home" />
+    <item
+        android:id="@+id/menu_item_school"
+        android:icon="@drawable/partner"
+        android:iconTint="@color/menu_items"
+        app:itemTextColor="@color/menu_items"
+
+        android:title="Partenaire" />
+
+
+    <item
+        android:id="@+id/menu_item_formation"
+        android:icon="@drawable/catalog"
+        android:iconTint="@color/menu_items"
+        app:itemTextColor="@color/menu_items"
+        android:tooltipText="@string/home"
+        android:title="Catalogue" />
+
+    <item
+        android:id="@+id/menu_item_account"
+        android:icon="@drawable/contact"
+        android:iconTint="@color/applicatioTheme"
+        app:itemTextColor="@color/applicatioTheme"
+
+        android:title="Contacts" />
+
+    <item
+        android:id="@+id/menu_item_funds"
+        android:icon="@drawable/money"
+        android:iconTint="@color/applicatioTheme"
+        app:itemTextColor="@color/applicatioTheme"
+        android:title="Levee de fonds" />
+</menu>
