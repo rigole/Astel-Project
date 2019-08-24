@@ -1,6 +1,10 @@
 package e.plass.acceuilwayfinding;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,22 +28,28 @@ import e.plass.acceuilwayfinding.model.InfoAdapter;
 public class DetailInformatiqueActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<MyData> mMyData;
+    private android.support.v7.widget.Toolbar toolbar;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_informatique);
         recyclerView = findViewById(R.id.recycler_view_info);
-
         recyclerView.setHasFixedSize(true);
-          recyclerView.setLayoutManager(new LinearLayoutManager(DetailInformatiqueActivity.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(DetailInformatiqueActivity.this));
         mMyData = new ArrayList<MyData>();
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.drawable.logoastel);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
         JsonFetch jsonFetch = new JsonFetch();
         jsonFetch.execute();
     }
 
 
-    public class JsonFetch extends AsyncTask<String, String, String> {
+    public class JsonFetch extends AsyncTask<String, Integer, String> {
 
         HttpURLConnection mHttpURLConnection = null;
         String mainfile;
@@ -47,7 +57,7 @@ public class DetailInformatiqueActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                URL url = new URL("https://astelmobile.000webhostapp.com/ServicesAstel/catalogue.php");
+                URL url = new URL("https://astelmobile.000webhostapp.com/ServicesAstel/info.php");
 
                 mHttpURLConnection = (HttpURLConnection) url.openConnection();
                 mHttpURLConnection.connect();
@@ -76,6 +86,8 @@ public class DetailInformatiqueActivity extends AppCompatActivity {
                      mMyData.add(new MyData(desc,img,refe,name));
                     i++;
 
+
+
                 }
 
 
@@ -89,13 +101,25 @@ public class DetailInformatiqueActivity extends AppCompatActivity {
             return null;
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
 
             InfoAdapter homeAdapter = new InfoAdapter(mMyData,DetailInformatiqueActivity.this);
             recyclerView.setAdapter(homeAdapter);
+            progressDialog.dismiss();
         }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            progressDialog = new ProgressDialog(DetailInformatiqueActivity.this);
+            progressDialog.setTitle("Veuillez Pateinter");
+            progressDialog.setMessage("Chargement du materiel informatique");
+            progressDialog.show();
+        }
+
 
     }
 }

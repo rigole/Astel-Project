@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import e.plass.acceuilwayfinding.MyData;
 import e.plass.acceuilwayfinding.R;
 
-public class MaisonAdapter  extends RecyclerView.Adapter<MaisonViewAdapter> {
+public class MaisonAdapter extends RecyclerView.Adapter<MaisonViewAdapter> {
 
     ArrayList<MyData> mMyData;
     Context context;

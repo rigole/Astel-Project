@@ -15,14 +15,49 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AutomobileActivity"></activity>
+        <activity android:name=".LeveeDeFondActivity"></activity>
+        <activity android:name=".SalleMangerActivity" />
+        <activity android:name=".MeubleActivity" />
+        <activity android:name=".FauteuilMaisonActivity" />
+        <activity android:name=".OldCarActivity" />
+        <activity android:name=".NewCarActivity" />
+        <activity android:name=".PickupActivity" />
+        <activity android:name=".BerlineActivity" />
+        <activity android:name=".FauteuilActivity" />
+        <activity android:name=".ConferenceTable" />
+        <activity android:name=".TableActivity" />
+        <activity android:name=".model.ChaiseActivity" />
+        <activity android:name=".TelevisionActivity" />
+        <activity android:name=".MachineLaverActivity" />
+        <activity android:name=".FroidActivity" />
+        <activity android:name=".CuisiniereActivity" />
+        <activity android:name=".AspirateurActivity" />
+        <activity android:name=".ScannerActivity" />
+        <activity android:name=".DesktopActivity" />
+        <activity android:name=".LaptopActivity" />
+        <activity android:name=".ImprimenteActivity" />
+        <activity android:name=".EcranActivity" />
+        <activity android:name=".ProduitAutomobileActivity" />
+        <activity android:name=".ProduitMaisonActivity" />
+        <activity android:name=".ProduitMenagerActivity" />
+        <activity android:name=".ProduitBureauActivity" />
+        <activity android:name=".ProduitInformatiqueActivity" />
+        <activity android:name=".AutomobileActivity" />
         <activity android:name=".MaterielMaisonActivity" />
         <activity android:name=".model.BureauActivity" />
         <activity android:name=".model.ElectromenagerActivity" />
         <activity android:name=".DetailInformatiqueActivity" />
         <activity android:name=".entree3" />
         <activity android:name=".entree2" />
-        <activity android:name=".entre1" />
+        <activity android:name=".entre1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
         <activity android:name=".ProfileActivity2" />
         <activity android:name=".MainActivity" />
         <activity
@@ -35,11 +70,7 @@
         <activity android:name=".Inscription" />
         <activity android:name=".Connexion" />
         <activity android:name=".Profile">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data

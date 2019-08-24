@@ -101,13 +101,14 @@ private ArrayList<MyData>mData;
 
         CardView cardView = (CardView) mainGrid.getChildAt(0);
         cardView.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext(), DetailInformatiqueActivity.class);
+            //Intent intent = new Intent(getContext(), DetailInformatiqueActivity.class);
+            Intent intent = new Intent(getContext(), ProduitInformatiqueActivity.class);
             startActivity(intent);
         });
 
         CardView cardView1 = (CardView) mainGrid.getChildAt(1);
         cardView1.setOnClickListener(v -> {
-            Intent intent = new Intent(getContext(), ElectromenagerActivity.class);
+            Intent intent = new Intent(getContext(), ProduitMenagerActivity.class);
             startActivity(intent);
         });
 
@@ -115,7 +116,8 @@ private ArrayList<MyData>mData;
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), BureauActivity.class);
+                //Intent intent = new Intent(getContext(), BureauActivity.class);
+                Intent intent = new Intent(getContext(), ProduitBureauActivity.class);
                 startActivity(intent);
             }
         });
@@ -124,7 +126,7 @@ private ArrayList<MyData>mData;
         cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MaterielMaisonActivity.class);
+                Intent intent = new Intent(getContext(),ProduitMaisonActivity.class);
                 startActivity(intent);
             }
         });
@@ -133,7 +135,7 @@ private ArrayList<MyData>mData;
         cardView4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), AutomobileActivity.class);
+                Intent intent = new Intent(getContext(), ProduitAutomobileActivity.class);
                 startActivity(intent);
             }
         });
@@ -156,7 +158,7 @@ private ArrayList<MyData>mData;
         recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));*/
     }
 
-public class JsonFetch extends AsyncTask<String,String,String>{
+/*public class JsonFetch extends AsyncTask<String,String,String>{
 
  HttpURLConnection mHttpURLConnection = null;
  String mainfile;
@@ -215,6 +217,7 @@ mHttpURLConnection.connect();
 
         HomeAdapter homeAdapter = new HomeAdapter(mData,getContext());
         recyclerView.setAdapter(homeAdapter);
-    }
+    }*/
 }
-}
+
+

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+
 
 <FrameLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,9 +10,10 @@
     tools:context=".HomeFragment"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-
-
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
     <LinearLayout
     android:orientation="vertical"
@@ -23,21 +21,18 @@
     android:weightSum="10"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-        <RelativeLayout
-            android:layout_weight="2"
-            android:layout_width="match_parent"
-            android:layout_height="0dp">
+
 
             <TextView
                 android:id="@+id/textGrid"
                 android:text="Nos Produits"
                 android:textSize="34sp"
                 android:textColor="@android:color/white"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-        </RelativeLayout>
+
 
         <GridLayout
             android:id="@+id/mainGrid"
@@ -45,7 +40,7 @@
             android:rowCount="3"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
-            android:layout_weight="8"
+            android:layout_weight="10"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:padding="14dp"
@@ -80,7 +75,7 @@
                         android:text="Materiel Informatique"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="18sp"
+                        android:textSize="10sp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -151,10 +146,11 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:text="Materiel de bureau"
+                        android:text="Bureau"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:textSize="10sp"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -188,10 +184,11 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:text="Materiel de Maison"
+                        android:text="Menager"
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:textSize="10sp"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -229,6 +226,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/colorPrimary"
                         android:textSize="10sp"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -258,6 +256,5 @@
 
 
     <!-- TODO: Update blank fragment layout -->
-
+    </ScrollView>
 </FrameLayout>
-    </android.support.v4.widget.NestedScrollView>

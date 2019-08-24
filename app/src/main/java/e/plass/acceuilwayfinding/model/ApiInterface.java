@@ -1,8 +1,6 @@
 package e.plass.acceuilwayfinding.model;
 
 
-import e.plass.acceuilwayfinding.MyData;
-import e.plass.acceuilwayfinding.MyData2;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;

@@ -1,6 +1,7 @@
 package e.plass.acceuilwayfinding;
 
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,15 +27,21 @@ import e.plass.acceuilwayfinding.model.MaisonAdapter;
 public class MaterielMaisonActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<MyData> mMyData;
+    private android.support.v7.widget.Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materiel_maison);
         mMyData = new ArrayList<MyData>();
+        toolbar = findViewById(R.id.toolbar);
         recyclerView = findViewById(R.id.recycler_view_maison);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(MaterielMaisonActivity.this));
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.drawable.logoastel);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
        JsonFetch jsonFetch = new JsonFetch();
         jsonFetch.execute();
     }

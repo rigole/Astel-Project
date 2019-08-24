@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/arr"
+    android:background="@drawable/slide1"
     tools:context=".Connexion">
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#F2B02779"
+    android:background="@color/applicatioTheme"
     >
 
     <LinearLayout
@@ -28,17 +28,17 @@
             android:layout_width="97dp"
             android:layout_height="94dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo"
+            android:src="@drawable/logoastel"
 
             />
 
-        <ImageView
+        <TextView
             android:id="@+id/phot2"
             android:layout_width="301dp"
             android:layout_height="28dp"
             android:layout_gravity="center"
             android:layout_alignBottom="@id/photo"
-            android:src="@drawable/new_wayfinding" />
+             />
 
         <View
             android:id="@+id/divider"
@@ -48,13 +48,13 @@
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
             android:layout_weight="15"
-            android:background="#F7370D" />
+            android:background="#Fff" />
 
         <TextView
             android:id="@+id/bienvenue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Bievenue"
+            android:text="Avec Astel On s'equipe en toute"
             android:textAlignment="center"
             android:textColor="#fff" />
 
@@ -62,7 +62,7 @@
             android:id="@+id/bienvenue2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Universitaire"
+            android:text="Flexibilité"
             android:textAlignment="center"
             android:textColor="#fff" />
     </LinearLayout>
@@ -119,7 +119,7 @@
             android:layout_marginLeft="25dp"
 
             android:textSize="14dp"
-            android:textColor="#fff"
+            android:textColor="#0C3C87"
 
 
             />
@@ -170,7 +170,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:text="Copyright TIPAM 2019,tous droits réservés"
+    android:text="Copyright Astel 2019,tous droits réservés"
     android:textColor="#ffff"/>
 
     </LinearLayout>

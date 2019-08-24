@@ -27,6 +27,7 @@ import android.view.SubMenu;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -53,6 +54,7 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
     private SearchFragment searchFragment;
     private NavigationView navigationView;
     private LeveeFragment leveeFragment;
+    private ImageView gif;
 
     private android.support.v7.widget.Toolbar toolbar;
     private DrawerLayout drawerLayout;
@@ -74,24 +76,30 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         mMainNav = findViewById(R.id.bottomNavigationView_menu);
+        gif = findViewById(R.id.imagesplash);
 
-        //BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView_menu);
-        // BottomNavigationViewHelper.disableShiftMode(mMainNav);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView_menu);
+         BottomNavigationViewHelper.disableShiftMode(mMainNav);
 
         navigationView.setNavigationItemSelectedListener(this);
 
 
-
+        gif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setFragment(leveeFragment);
+            }
+        });
 
         setSupportActionBar(toolbar);
-       // getSupportActionBar().setTitle(R.string.app_name);
+        getSupportActionBar().setTitle(R.string.app_name);
         getSupportActionBar().setIcon(R.drawable.logoastel);
 
         //ToolBar define
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setHomeAsUpIndicator(R.drawable.ic_format);
+        actionbar.setHomeAsUpIndicator(R.drawable.ic_hamburger_icons_plan_icons_plan);
         drawerLayout.addDrawerListener(
                 new DrawerLayout.DrawerListener() {
                     @Override
@@ -152,9 +160,9 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
                     case R.id.menu_item_account:
                         setFragment(accountFragment);
                         return true;
-                    case R.id.menu_item_funds:
+                    /*case R.id.menu_item_funds:
                         setFragment(leveeFragment);
-                        return true;
+                        return true;*/
                     default:
                         return false;
                 }
@@ -193,11 +201,11 @@ public class Profile extends AppCompatActivity implements NavigationView.OnNavig
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        if(menuItem.getItemId() == R.id.prin_discon){
+       /* if(menuItem.getItemId() == R.id.prin_discon){
             Intent i = new Intent(Profile.this,Aceuil.class);
             startActivity(i);
             this.finish();
-        }
+        }*/
         return true;
     }
 

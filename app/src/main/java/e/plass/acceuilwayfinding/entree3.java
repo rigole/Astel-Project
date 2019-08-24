@@ -38,7 +38,7 @@ public class entree3 extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(entree3.this,Profile.class);
+                Intent i = new Intent(entree3.this,MainActivity.class);
                 startActivity(i);
             }
         });

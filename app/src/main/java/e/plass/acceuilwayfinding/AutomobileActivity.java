@@ -1,6 +1,7 @@
 package e.plass.acceuilwayfinding;
 
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,15 +27,26 @@ import e.plass.acceuilwayfinding.model.BureauAdapter;
 public class AutomobileActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<MyData> mMyData;
-
+    private android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_automobile);
         recyclerView = findViewById(R.id.recycler_view_automobile);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(AutomobileActivity.this));
+        toolbar = findViewById(R.id.toolbar);
         mMyData = new ArrayList<MyData>();
+        setSupportActionBar(toolbar);
+        // getSupportActionBar().setTitle(R.string.app_name);
+        getSupportActionBar().setIcon(R.drawable.logoastel);
+
+        //ToolBar define
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
+        //actionbar.setDisplayHomeAsUpEnabled(true);
+        //actionbar.setHomeAsUpIndicator(R.drawable.ic_format);
      JsonFetch jsonFetch = new JsonFetch();
         jsonFetch.execute();
     }
@@ -47,7 +59,7 @@ public class AutomobileActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                URL url = new URL("https://astelmobile.000webhostapp.com/ServicesAstel/info.php");
+                URL url = new URL("https://astelmobile.000webhostapp.com/ServicesAstel/catalogue.php");
 
                 mHttpURLConnection = (HttpURLConnection) url.openConnection();
                 mHttpURLConnection.connect();

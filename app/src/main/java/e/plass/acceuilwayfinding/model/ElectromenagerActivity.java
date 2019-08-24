@@ -1,6 +1,7 @@
 package e.plass.acceuilwayfinding.model;
 
 import android.os.AsyncTask;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -26,6 +27,7 @@ import e.plass.acceuilwayfinding.R;
 public class ElectromenagerActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     private ArrayList<MyData> mMyData;
+    private android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,11 @@ public class ElectromenagerActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(ElectromenagerActivity.this));
         mMyData = new ArrayList<MyData>();
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setIcon(R.drawable.logoastel);
+        setSupportActionBar(toolbar);
+        ActionBar actionbar = getSupportActionBar();
         JsonFetch jsonFetch = new JsonFetch();
         jsonFetch.execute();
     }

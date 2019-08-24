@@ -19,7 +19,7 @@ public class Aceuil extends AppCompatActivity  {
         setContentView(R.layout.activity_acceuil);
         btnConnexion = findViewById(R.id.btn_connexion);
         btnInscription = findViewById(R.id.btn_inscription);
-        //btnpass = findViewById(R.id.btn_pass);
+        btnpass = findViewById(R.id.btn_skip);
         btnConnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,14 +34,14 @@ public class Aceuil extends AppCompatActivity  {
             }
         });
 
-        /*btnpass.setOnClickListener(new View.OnClickListener() {
+        btnpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivityProfile();
             }
 
 
-        });*/
+        });
     }
     private void openActivityProfile() {
 

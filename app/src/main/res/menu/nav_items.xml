@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/menu_item_home"
-        android:icon="@drawable/ic_hamburger_icons_plan_icons_plan"
+        android:icon="@drawable/ic_home_black_24dp"
         android:iconTint="@color/applicatioTheme"
         app:itemTextColor="@color/applicatioTheme"
 
@@ -34,10 +34,10 @@
 
         android:title="Contacts" />
 
-    <item
+  <!--  <item
         android:id="@+id/menu_item_funds"
         android:icon="@drawable/money"
         android:iconTint="@color/applicatioTheme"
         app:itemTextColor="@color/applicatioTheme"
-        android:title="Levee de fonds" />
+        android:title="Levee de fonds" /> -->
 </menu>

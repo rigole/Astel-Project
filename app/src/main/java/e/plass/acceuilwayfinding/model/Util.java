@@ -20,7 +20,7 @@ public class Util {
         ecoles.clear();
         Calendar c = Calendar.getInstance();
         c.set(2010,01,01);
-        ecoles.add(new Ecole(1,12f,"Camtel","camtel", c,"Douala","",""
+        ecoles.add(new Ecole(1,12f,"Schneider","camtel", c,"Douala","",""
         ,"loriem ipsum At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri"));
 
         c.set(1971,06,04);
@@ -28,7 +28,7 @@ public class Util {
         ,"loriem ipsum At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri  "));
 
         c.set(2002,01,01);
-        ecoles.add(new Ecole(3,15f,"Eneo","electromenager", c,"Douala","","Paul GUIMEZAP"
+        ecoles.add(new Ecole(3,15f,"Ingelec","electromenager", c,"Douala","","Paul GUIMEZAP"
         ,"loriem ipsum At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri"));
 
 
@@ -42,11 +42,11 @@ public class Util {
 
 
         c.set(2010,01,01);
-        ecoles.add(new Ecole(6,8f,"Chococam","electromenager", c,"Douala","",""
+        ecoles.add(new Ecole(6,8f,"Toyota","electromenager", c,"Douala","",""
         ,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
 
         c.set(2010,01,01);
-        ecoles.add(new Ecole(7,8f,"Total","electromenager", c,"Douala","",""
+        ecoles.add(new Ecole(7,8f,"FNE","electromenager", c,"Douala","",""
         ,"loriem ipsum At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri."));
 
 

@@ -52,9 +52,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/edit_round"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textPersonName"
                     android:hint="Nom et Prénom"
-
                     android:layout_marginBottom="10dp"
                     android:padding="10dp"
                     android:textColor="#0C3C87"/>
@@ -169,7 +168,7 @@ n.widget.TextInputLayout>
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:text="Valider"
-                    android:background="@drawable/round2"
+                    android:background="@drawable/roundlevee"
                     android:textColor="#ffff"
                     android:layout_marginTop="15dp"
                     android:padding="10dp"
